@@ -18,7 +18,7 @@ class CustomHandler:
 
 
 if __name__ == '__main__':
-    logging.basicConfig(format='%(asctime)s %(message)s',level=logging.INFO)
+    logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s',level=logging.INFO)
     handler = CustomHandler()
     controller = Controller(handler, hostname='127.0.0.1', port=25)
     controller.start()
