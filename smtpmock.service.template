@@ -1,0 +1,15 @@
+[Unit]
+Description=SMTPMock Service
+After=network.target
+
+[Service]
+Type=simple
+User=%username%
+Group=%groupname%
+WorkingDirectory=%currentpath%
+ExecStart=%currentpath%/bin/python3 -m smtpmock
+Restart=always
+Environment="PYTHONUNBUFFERED=1"
+
+[Install]
+WantedBy=multi-user.target
